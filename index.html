@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,9 +16,62 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <section class="home"></section>
-    <section class="playground"></section>
-    <section class="score"></section>
+  <body class="font-poppins">
+    <main class="bg-[#010313] min-h-screen bg-[url(images/background.png)] bg-no-repeat bg-center">
+      <!-- Home Screen -->
+      <section
+        class="home flex flex-col items-center justify-center min-h-screen space-y-10 hidden"
+      >
+        <h1 class="text-white text-9xl font-bold uppercase font-anton">Alphabet Clash</h1>
+        <p class="text-white text-xl">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+        <div>
+          <button class="text-black font-xl font-bold bg-white px-8 py-4 rounded-lg">
+            Play Now
+          </button>
+        </div>
+      </section>
+      <!-- Playground -->
+      <section class="playground">
+        <!-- Screen -->
+        <!-- Keyboard -->
+        <div>
+          <div class="flex justify-center gap-1 my-1 w-full">
+            <kbd class="kbd">q</kbd>
+            <kbd class="kbd">w</kbd>
+            <kbd class="kbd">e</kbd>
+            <kbd class="kbd">r</kbd>
+            <kbd class="kbd">t</kbd>
+            <kbd class="kbd">y</kbd>
+            <kbd class="kbd">u</kbd>
+            <kbd class="kbd">i</kbd>
+            <kbd class="kbd">o</kbd>
+            <kbd class="kbd">p</kbd>
+          </div>
+          <div class="flex justify-center gap-1 my-1 w-full">
+            <kbd class="kbd">a</kbd>
+            <kbd class="kbd">s</kbd>
+            <kbd class="kbd">d</kbd>
+            <kbd class="kbd">f</kbd>
+            <kbd class="kbd">g</kbd>
+            <kbd class="kbd">h</kbd>
+            <kbd class="kbd">j</kbd>
+            <kbd class="kbd">k</kbd>
+            <kbd class="kbd">l</kbd>
+          </div>
+          <div class="flex justify-center gap-1 my-1 w-full">
+            <kbd class="kbd">z</kbd>
+            <kbd class="kbd">x</kbd>
+            <kbd class="kbd">c</kbd>
+            <kbd class="kbd">v</kbd>
+            <kbd class="kbd">b</kbd>
+            <kbd class="kbd">n</kbd>
+            <kbd class="kbd">m</kbd>
+            <kbd class="kbd">/</kbd>
+          </div>
+        </div>
+        <!-- Lifeline and Score -->
+      </section>
+      <section class="score"></section>
+    </main>
   </body>
 </html>
