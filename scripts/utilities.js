@@ -7,3 +7,15 @@ function showElementById(id) {
   const element = document.getElementById(id);
   element.classList.remove("hidden");
 }
+function addBackgroundColorById(id) {
+  const keyboardAlphabet = document.getElementById(id);
+  keyboardAlphabet.classList.add("bg-orange-400");
+}
+
+function getRandomAlphabet() {
+  const alphabets = "abcdefghijklmnopqrstuvwxyz";
+  const alphabetsArray = alphabets.split("");
+  const randomNumber = Math.floor(Math.random() * alphabetsArray.length);
+  const randomAlaphabet = alphabetsArray[randomNumber];
+  return randomAlaphabet;
+}
