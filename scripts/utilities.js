@@ -11,6 +11,10 @@ function addBackgroundColorById(id) {
   const keyboardAlphabet = document.getElementById(id);
   keyboardAlphabet.classList.add("bg-orange-400");
 }
+function removeBackgroundColorById(id) {
+  const keyboardAlphabet = document.getElementById(id);
+  keyboardAlphabet.classList.remove("bg-orange-400");
+}
 
 function getRandomAlphabet() {
   const alphabets = "abcdefghijklmnopqrstuvwxyz";
