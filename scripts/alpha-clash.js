@@ -29,6 +29,7 @@ document.addEventListener("keyup", function (event) {
   if (playerPressed === "Escape") {
     gameOver();
   }
+
   if (playerPressed === displayKey) {
     // Update the score
     const currentScore = getTextElementValuById("score");
