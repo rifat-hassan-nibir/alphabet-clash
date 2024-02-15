@@ -102,14 +102,15 @@
 
       <!-- Score -->
       <section
-        class="score text-center flex flex-col items-center justify-center min-h-screen hidden"
+        id="final-score"
+        class="text-center flex flex-col items-center justify-center min-h-screen hidden"
       >
         <div class="text-white space-y-5">
           <h1 class="text-6xl">
             <span class="font-bold">Score:</span>
-            <span>14</span>
+            <span id="final-score-value">14</span>
           </h1>
-          <button class="btn font-bold">Play Now</button>
+          <button onclick="play()" class="btn font-bold">Play Now</button>
           <p>Practice will make you Pro</p>
         </div>
       </section>

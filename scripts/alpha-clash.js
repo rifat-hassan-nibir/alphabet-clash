@@ -1,6 +1,5 @@
 function continuePlaying() {
   const alphabet = getRandomAlphabet();
-  console.log(alphabet);
   const displayKey = document.getElementById("displayKey");
   displayKey.innerText = alphabet;
   addBackgroundColorById(alphabet);
@@ -8,29 +7,39 @@ function continuePlaying() {
 
 function play() {
   hideElementById("home");
+  hideElementById("final-score");
   showElementById("playground");
   continuePlaying();
+  setTextElementValueById("score", 0);
+  setTextElementValueById("life", 5);
 }
 
 // Capture keyboard keypress
 document.addEventListener("keyup", function (event) {
-  console.log(event.key);
   const playerPressed = event.key;
   const displayKey = document.getElementById("displayKey").innerText;
   if (playerPressed === displayKey) {
     // Update the score
-    const currentScoreElement = document.getElementById("score");
-    const currentScore = parseInt(currentScoreElement.innerText);
+    const currentScore = getTextElementValuById("score");
     const newScore = currentScore + 1;
-    currentScoreElement.innerText = newScore;
+    setTextElementValueById("score", newScore);
 
     removeBackgroundColorById(playerPressed);
     continuePlaying();
   } else {
     // Update the life
-    const currentLifeElement = document.getElementById("life");
-    const currentLife = parseInt(currentLifeElement.innerText);
+    const currentLife = getTextElementValuById("life");
     const newLife = currentLife - 1;
-    currentLifeElement.innerText = newLife;
+    setTextElementValueById("life", newLife);
+
+    // End game
+    if (currentLife === 1) {
+      hideElementById("playground");
+      showElementById("final-score");
+
+      // Show highscore
+      const score = getTextElementValuById("score");
+      setTextElementValueById("final-score-value", score);
+    }
   }
 });

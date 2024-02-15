@@ -16,6 +16,17 @@ function removeBackgroundColorById(id) {
   keyboardAlphabet.classList.remove("bg-orange-400");
 }
 
+function getTextElementValuById(id) {
+  const element = document.getElementById(id);
+  const elementValue = parseInt(element.innerText);
+  return elementValue;
+}
+
+function setTextElementValueById(id, value) {
+  const element = document.getElementById(id);
+  element.innerText = value;
+}
+
 function getRandomAlphabet() {
   const alphabets = "abcdefghijklmnopqrstuvwxyz";
   const alphabetsArray = alphabets.split("");
