@@ -14,10 +14,21 @@ function play() {
   setTextElementValueById("life", 5);
 }
 
+function gameOver() {
+  showElementById("home");
+  hideElementById("final-score");
+  hideElementById("playground");
+  const alphabet = getElementValueById("displayKey");
+  removeBackgroundColorById(alphabet);
+}
+
 // Capture keyboard keypress
 document.addEventListener("keyup", function (event) {
   const playerPressed = event.key;
   const displayKey = document.getElementById("displayKey").innerText;
+  if (playerPressed === "Escape") {
+    gameOver();
+  }
   if (playerPressed === displayKey) {
     // Update the score
     const currentScore = getTextElementValuById("score");
