@@ -40,6 +40,8 @@ document.addEventListener("keyup", function (event) {
       // Show highscore
       const score = getTextElementValuById("score");
       setTextElementValueById("final-score-value", score);
+      const alphabet = getElementValueById("displayKey");
+      removeBackgroundColorById(alphabet);
     }
   }
 });
